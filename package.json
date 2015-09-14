@@ -1,8 +1,8 @@
 {
-  "name": "csv-tools",
+  "name": "csv-delim",
   "version": "0.0.1",
-  "repo": "https://github.com/jb55/csv-tools",
-  "description": "fast C csv utilities",
+  "repo": "https://github.com/jb55/csv-delim",
+  "description": "Re-deliminate a csv",
   "keywords": ["csv-tools", "csv"],
   "dependencies": {
     "jb55/csv.c": "*"
