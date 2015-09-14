@@ -29,4 +29,8 @@
 
     $ csv-delim < in.csv | awk -F $'\t' '$3 == "match me"'
 
-  etc
+  Maybe use these aliases to make this a bit nicer:
+
+    $ alias cutt="cut -d $'\t'"
+    $ alias awkt="awk -F $'\t'"
+
