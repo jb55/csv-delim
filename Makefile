@@ -1,5 +1,5 @@
 
-BIN ?= csv-tab
+BIN ?= csv-delim
 PREFIX ?= /usr/local
 CFLAGS = 
 #CFLAGS = -L${JEMALLOC_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc 

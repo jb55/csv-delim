@@ -2,7 +2,7 @@
   "name": "csv-delim",
   "version": "0.0.1",
   "repo": "https://github.com/jb55/csv-delim",
-  "description": "Re-deliminate a csv",
+  "description": "Deliminate a csv",
   "keywords": ["csv-tools", "csv"],
   "dependencies": {
     "jb55/csv.c": "*"
