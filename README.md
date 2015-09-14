@@ -1,26 +1,18 @@
 
-# csv-tools
+# csv-delim
 
-  Fast csv tools in C. Work in progress.
+  Delimininate a csv file
 
-## Examples
+## Usage
 
-### csv-cut
+  Convert csv to tsv quickly
 
-  cut analog for csvs
+    $ csv-delim < in.csv > out.tsv
 
-  TODO: multiple field support
+  Some custom input delimination
 
-    $ csv-cut -f2 < huge_data.csv
+    $ csv-delim -i '|' < in.psv > out.tsv
 
-### csv-tabulate
+  Some custom output delimination
 
-  Convert to tabs.
-
-  TODO: generalize
-
-    $ csv-tabulate < huge_data.csv
-
-## License
-
-  GPLv2
+    $ csv-delim -d '|' < in.csv > out.psv
