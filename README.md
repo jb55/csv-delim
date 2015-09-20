@@ -17,6 +17,20 @@
 
     $ csv-delim -d '|' < in.csv > out.psv
 
+## Examples
+
+### csv pretty printer
+
+    $ csv-column () { csv-delim < "$1" | column -t -s $'\t' | less -S }
+
+### csv grep
+
+    $ csv-delim < in.csv | awk -F $'\t' '$3 == "match me"'
+
+### csv cut
+
+    $ csv-cut () { cmd="$1"; shift; csv-delim < "$CMD" | cut -d $'\t' "$@" }
+
 ## Why
 
   I started writing a bunch of [csv tools](https://github.com/jb55/csv-tools)
