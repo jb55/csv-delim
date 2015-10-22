@@ -5,6 +5,7 @@
 #include <getopt.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <errno.h>
 #include "csv.c/csv.h"
 
 int chosenCol = 0;
@@ -42,6 +43,7 @@ void row_cb(int c, void *outfile) {
 
 int main(int argc, const char *argv[]) {
   char c;
+  FILE *fd;
   char buffer[65535];
   ssize_t nread;
   struct csv_parser parser;
@@ -75,8 +77,16 @@ int main(int argc, const char *argv[]) {
     }
     }
   }
-  
-  while ((nread = fread(buffer, 1, sizeof(buffer), stdin)) > 0) {
+
+  // open file if we have non-opt argument
+  fd = optind < argc? fopen(argv[optind], "r") : stdin;
+  if (!fd) {
+    fprintf(stderr, "%s: %s: %s\n",
+            argv[0], argv[optind], strerror(errno));
+    exit(1);
+  }
+
+  while ((nread = fread(buffer, 1, sizeof(buffer), fd)) > 0) {
     csv_parse(&parser, buffer, nread, field_cb, row_cb, stdout);
   }
 
