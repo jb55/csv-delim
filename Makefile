@@ -11,6 +11,7 @@ csv-delim: delim.c $(DEPS)
 	$(CC) $(CFLAGS) -Ideps -o $@ $^
 
 install: $(BIN)
+	mkdir -p $(PREFIX)/bin
 	install $^ $(PREFIX)/bin
 
 clean:
