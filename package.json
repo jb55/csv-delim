@@ -1,6 +1,6 @@
 {
   "name": "csv-delim",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "repo": "https://github.com/jb55/csv-delim",
   "description": "Deliminate a csv",
   "keywords": ["csv-tools", "csv"],
