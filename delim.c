@@ -41,7 +41,7 @@ void row_cb(int c, void *outfile) {
   fputc('\n', (FILE *)outfile);
 }
 
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
   char c;
   FILE *fd;
   char buffer[65535];
